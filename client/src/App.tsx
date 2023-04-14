@@ -71,25 +71,26 @@ function App() {
       </header>
       <main className="container">
         <h2>Wilders</h2>
-        <div className="addform">
-          <AddWilder />
-          <AddSkill />
-          <AddSkillWithGrade wilders={wilders} />
+        <div className="addform-card-row">
+          <div className="addform">
+            <AddWilder />
+            <AddSkill />
+            <AddSkillWithGrade wilders={wilders} />
+          </div>
+          <section className="card-row">
+            {wilders?.map((wilderData, key: Key) => {
+              return (
+                <Wilder
+                  key={key}
+                  id={wilderData.id}
+                  name={wilderData.name}
+                  skills={wilderData.skills}
+                  city={wilderData.city}
+                />
+              );
+            })}
+          </section>
         </div>
-
-        <section className="card-row">
-          {wilders?.map((wilderData, key: Key) => {
-            return (
-              <Wilder
-                key={key}
-                id={wilderData.id}
-                name={wilderData.name}
-                skills={wilderData.skills}
-                city={wilderData.city}
-              />
-            );
-          })}
-        </section>
       </main>
       <footer>
         <div className="container">
