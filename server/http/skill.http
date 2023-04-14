@@ -1,0 +1,22 @@
+POST http://localhost:8000/api/skill
+Content-Type: application/json
+
+{
+    "name":""
+}
+
+###
+GET http://localhost:8000/api/skill
+
+### 
+DELETE  http://localhost:8000/api/skill/7
+
+
+###
+PUT   http://localhost:8000/api/skill
+Content-Type: application/json
+
+{
+    "id":"1",
+    "name":"JS"
+}

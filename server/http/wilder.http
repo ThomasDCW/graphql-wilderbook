@@ -1,0 +1,43 @@
+POST http://localhost:8000/api/wilder
+Content-Type: application/json
+
+{
+    "name":"",
+    "city":""
+}
+
+###
+GET http://localhost:8000/api/wilder
+
+### 
+DELETE  http://localhost:8000/api/wilder/3
+
+
+###
+PUT   http://localhost:8000/api/wilder
+Content-Type: application/json
+
+{
+    "id":"3",
+    "name":"tutu"
+}
+
+
+###
+PUT http://localhost:8000/api/wilder/addskill
+Content-Type: application/json
+
+{
+    "wilderName":"tata",
+    "skillName":"React"
+}
+
+###
+PUT http://localhost:8000/api/wilder-rate-skill
+Content-Type: application/json
+
+{
+    "wilderName": "tata",
+    "skillName": "React",
+    "value": 5
+}
