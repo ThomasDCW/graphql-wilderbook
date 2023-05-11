@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { toast } from "react-toastify";
 import { gql, useMutation } from "@apollo/client";
-import { GET_WILDERS } from "../pages/HomePage";
+import { GET_WILDERS } from "../pages/Home";
 
 const CREATE_WILDER = gql`
   mutation CreateWilder($name: String!, $city: String!) {

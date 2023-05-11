@@ -41,7 +41,6 @@ export const GET_WILDERS = gql`
 
 const formatWildersFromApi = (wilders: WilderAPI[]): WilderProps[] =>
   wilders.map((wilder) => {
-    console.log(wilders);
     return {
       id: wilder.id,
       name: wilder.name,
@@ -51,7 +50,7 @@ const formatWildersFromApi = (wilders: WilderAPI[]): WilderProps[] =>
       }),
     };
   });
-export default function HomePage() {
+export default function Home() {
   const { loading, error, data } = useQuery(GET_WILDERS);
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;

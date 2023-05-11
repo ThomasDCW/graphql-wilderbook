@@ -7,7 +7,7 @@ import dataSource from "../utils";
 @Resolver(User)
 export class UserResolver {
   @Query(() => String)
-  async getToken(
+  async login(
     @Arg("email") email: string,
     @Arg("password") password: string
   ): Promise<string> {

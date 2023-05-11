@@ -1,5 +1,5 @@
 import { Key, useState } from "react";
-import { GET_WILDERS, SkillAPI } from "../pages/HomePage";
+import { GET_WILDERS, SkillAPI } from "../pages/Home";
 import { WilderProps } from "./Wilder";
 import { gql, useMutation, useQuery } from "@apollo/client";
 
